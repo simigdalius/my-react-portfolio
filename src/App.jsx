@@ -1,11 +1,13 @@
 import React from "react";
-import Counter from './Counter.jsx'
+import Counter from './counter.jsx'
+import Menu from "./menu";
 
 function App() {
   return (
     <div>
+        <Menu />
     
-      <h1>Hello React!</h1>
+      <h1>Hi there, I'm Angeliki! </h1>
 
       <Counter />
 
