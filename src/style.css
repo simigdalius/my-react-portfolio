@@ -5,8 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: #000033;
+background: #22c39b;
+background: linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(4, 31, 207, 1) 100%);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -84,8 +85,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    background: #2d49d6;
+background: radial-gradient(circle, rgba(45, 73, 214, 1) 0%, rgba(168, 44, 81, 1) 89%, rgba(252, 70, 107, 1) 100%);
   }
   a:hover {
     color: #747bff;
