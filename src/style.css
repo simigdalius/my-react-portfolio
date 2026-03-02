@@ -3,15 +3,12 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background: #000033;
-background: #22c39b;
+  color-scheme: dark;
+  background: #22c39b;
+background: -webkit-linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
+background: -moz-linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
 background: linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22C39B", endColorstr="#0B1766", GradientType=0);
 }
 
 a {
@@ -95,30 +92,7 @@ button:focus-visible {
   }
 }
 
-/* Βασικό styling για menu */
-.menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.menu li a:hover {
-  color: #00054e; /* Μικρό hover effect */
-}
+/*KOUMPI ANIMATION SIMIGDALIUS*/
 
 .btn {
   position: relative;
@@ -127,7 +101,7 @@ button:focus-visible {
   font-weight: 600;
   color: white;
   background: none;
-  border: 2px solid #646cff;
+  border: 2px solid #22c39b;
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
@@ -135,7 +109,7 @@ button:focus-visible {
 }
 
 .liquid {
-  background: linear-gradient(#030752 0 0) no-repeat calc(200% - var(--p, 0%))
+  background: linear-gradient(#040968 0 0) no-repeat calc(200% - var(--p, 0%))
     100% / 200% var(--p, 0.2em);
   transition: 0.3s var(--t, 0s),
     background-position 0.3s calc(0.3s - var(--t, 0s));
@@ -145,4 +119,250 @@ button:focus-visible {
   --p: 100%;
   --t: 0.3s;
   color: #fff;
+}
+
+
+
+/*gia to menu*/
+.pill-nav-container {
+  position: absolute;
+  top: 1em;
+  right: 1em; /* Τοποθέτηση πάνω δεξιά */
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .pill-nav-container {
+    width: 100%;
+    left: 0;
+    right: auto; /* Επαναφορά για κινητά αν χρειάζεται full width */
+  }
+}
+
+.pill-nav {
+  --nav-h: 42px;
+  --logo: 36px;
+  --pill-pad-x: 18px;
+  --pill-gap: 3px;
+  /* Ορισμός των νέων χρωμάτων ως μεταβλητές για ευκολία */
+  --base: #030752; 
+  --accent: #7ed7dd;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .pill-nav {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: transparent;
+  }
+}
+
+.pill-nav-items {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  background: var(--base); /* Σκούρο Μπλε */
+  border-radius: 9999px;
+}
+
+.pill-logo {
+  width: var(--nav-h);
+  height: var(--nav-h);
+  border-radius: 50%;
+  background: var(--base); /* Σκούρο Μπλε */
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pill-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pill-list {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  gap: var(--pill-gap);
+  margin: 0;
+  padding: 3px;
+  height: 100%;
+}
+
+.pill-list > li {
+  display: flex;
+  height: 100%;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 var(--pill-pad-x);
+  background: var(--accent); /* Teal/Πράσινο αντί για άσπρο */
+  color: var(--base); /* Σκούρο Μπλε γράμματα */
+  text-decoration: none;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.pill .hover-circle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  border-radius: 50%;
+  background: var(--base); /* Σκούρο Μπλε στο hover */
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.pill .label-stack {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  z-index: 2;
+}
+
+.pill .pill-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 1;
+  will-change: transform;
+}
+
+.pill .pill-label-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent); /* Teal γράμματα στο hover */
+  z-index: 3;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.pill.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--base);
+  border-radius: 50px;
+  z-index: 4;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+.mobile-menu-button {
+  width: var(--nav-h);
+  height: var(--nav-h);
+  border-radius: 50%;
+  background: var(--base); /* Σκούρο Μπλε */
+  border: none;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: flex;
+  }
+}
+
+.hamburger-line {
+  width: 16px;
+  height: 2px;
+  background: var(--accent); /* Teal γραμμές */
+  border-radius: 1px;
+  transition: all 0.01s ease;
+  transform-origin: center;
+}
+
+.mobile-menu-popover {
+  position: absolute;
+  top: 3em;
+  left: 1rem;
+  right: 1rem;
+  background: #f0f0f0; /* Μπορείς να το αλλάξεις σε var(--base) αν θες σκούρο menu */
+  border-radius: 27px;
+  box-shadow: 0 8px 32px rgba(3, 7, 82, 0.25);
+  z-index: 998;
+  opacity: 0;
+  transform-origin: top center;
+  visibility: hidden;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobile-menu-popover .mobile-menu-link {
+  display: block;
+  padding: 12px 16px;
+  color: var(--base);
+  background-color: var(--accent);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-popover .mobile-menu-link:hover {
+  cursor: pointer;
+  background-color: var(--base);
+  color: var(--accent);
 }

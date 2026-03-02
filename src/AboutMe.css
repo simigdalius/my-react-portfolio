@@ -1,0 +1,54 @@
+.about-container {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Για να δουλεύει και σε κινητά */
+}
+
+.about-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-text hr {
+  width: 50px;
+  border: 2px solid cyan;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.skill-tag {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid cyan;
+  color: cyan;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
