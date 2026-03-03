@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // <-
 import Menu from "./menu";
 import AboutMe from "./AboutMe";
 import Grainient from './Grainient';
+import RotatingText from './RotatingText'
 
 
 
@@ -52,7 +53,35 @@ function App() {
           {/* Η Αρχική Σελίδα */}
           <Route path="/" element={
             <header style={{ padding: "50px" }}>
-              <h1>Hi there, I'm Angeliki!</h1>
+  <h1>Hi there, I'm Angeliki!</h1>
+  
+  <div style={{ 
+    display: "flex", 
+    alignItems: "center", 
+    justifyContent: "center", // Κεντράρει το περιεχόμενο μέσα στο div
+    gap: "15px", 
+    fontSize: "1.8rem", 
+    marginTop: "20px",
+    marginBottom: "30px"
+  }}>
+
+
+    {/* ΤΟ ΚΙΝΟΥΜΕΝΟ ΚΕΙΜΕΝΟ */}
+    <RotatingText
+      texts={['Game', 'Web', 'Embedded Systems']}
+      mainClassName="px-2 bg-cyan-300 text-black overflow-hidden py-1 justify-center rounded-lg"
+      staggerFrom={"last"}
+      initial={{ y: "100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: "-120%", opacity: 0 }}
+      staggerDuration={0.025}
+      splitLevelClassName="overflow-hidden"
+      transition={{ type: "spring", damping: 30, stiffness: 400 }}
+      rotationInterval={2000}
+    />
+    <span>Developer</span> 
+  </div>
+  <br></br>
               <a
                 className="btn liquid"
                 href="https://github.com/simigdalius"
