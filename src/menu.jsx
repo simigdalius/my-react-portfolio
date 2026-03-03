@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
-import './style.css'; // Βεβαιώσου ότι το αρχείο CSS λέγεται έτσι
+import './cssFiles/style.css'; // Βεβαιώσου ότι το αρχείο CSS λέγεται έτσι
 
 const Menu = ({ logo, logoAlt = 'Logo', items, baseColor = '#000', pillColor = '#fff' }) => {
   const location = useLocation(); // Για να ξέρει το μενού σε ποια σελίδα είμαστε

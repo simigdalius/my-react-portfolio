@@ -2,13 +2,6 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: dark;
-  background: #22c39b;
-background: -webkit-linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
-background: -moz-linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
-background: linear-gradient(0deg, rgba(34, 195, 155, 1) 0%, rgba(11, 23, 102, 1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22C39B", endColorstr="#0B1766", GradientType=0);
 }
 
 a {
@@ -80,17 +73,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    background: #2d49d6;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
 
 /*KOUMPI ANIMATION SIMIGDALIUS*/
 
@@ -366,3 +348,4 @@ button:focus-visible {
   background-color: var(--base);
   color: var(--accent);
 }
+

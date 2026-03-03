@@ -1,0 +1,9 @@
+.grainient-container {
+  position: fixed; /* Κλειδώνει στην οθόνη */
+  top: 0;
+  left: 0;
+  width: 100vw;    /* 100% του πλάτους του viewport */
+  height: 100vh;   /* 100% του ύψους του viewport */
+  z-index: -1;     /* Το στέλνει πίσω από όλα τα άλλα στοιχεία */
+  overflow: hidden;
+}

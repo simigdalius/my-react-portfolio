@@ -1,6 +1,6 @@
 import React from "react";
-import "./style.css"; // Θα φτιάξουμε αυτό το αρχείο μετά
-import "./AboutMe.css";
+import "./cssFiles/style.css"; // Θα φτιάξουμε αυτό το αρχείο μετά
+import "./cssFiles/AboutMe.css";
 import SpotlightCard from './SpotlightCard';
 
 function AboutMe() {
